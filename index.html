@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Prof. Dr. Boris Vertman, Professor of Geometry and Mathematical Physics at the Technical University of Berlin. Research, curriculum vitae, publications and lectures.">
+  <meta name="description" content="Prof. Dr. Boris Vertman, Professor of Geometry and Mathematical Physics at the Technical University of Berlin. Research, curriculum vitae, publications and teaching.">
   <meta name="color-scheme" content="light">
   <title>Prof. Dr. Boris Vertman | Geometry and Mathematical Physics</title>
   <style>
@@ -61,10 +61,9 @@
       grid-template-columns: minmax(0, 1fr) 330px;
       gap: 40px;
       align-items: center;
-      margin-bottom: 38px;
+      margin-bottom: 28px;
     }
-    .role { margin-bottom: 2px; font-size: 20px; color: var(--blue); }
-    .specialism { margin-bottom: 18px; color: var(--muted); }
+    .role { margin-bottom: 18px; font-size: 20px; color: var(--blue); }
     address { font-style: normal; }
     address p { margin-bottom: 12px; }
     address a { overflow-wrap: anywhere; }
@@ -77,26 +76,15 @@
     .documents {
       display: flex;
       flex-wrap: wrap;
-      margin: 32px 0 8px;
+      margin: 0 0 8px;
       padding: 18px 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
       gap: 16px 36px;
     }
     .documents a { font-size: 17px; }
-    .pdf-label {
-      display: inline-block;
-      margin-left: 7px;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .6px;
-      vertical-align: 1px;
-    }
-    .document-note { font-size: 12px; color: var(--muted); }
-    figure { margin: 22px 0 0; }
-    .teaching-photo { width: 100%; }
-    figcaption { margin-top: 7px; font-size: 13px; color: var(--muted); }
+    figure { max-width: 500px; margin: 22px 0 0; }
+    .teaching-photo { width: 500px; max-width: 100%; height: auto; }
     footer {
       margin-top: 34px;
       padding-top: 15px;
@@ -129,7 +117,6 @@
       <div>
         <!-- Position and email address updated as provided by Boris Vertman. -->
         <p class="role">Professor of Geometry<br>and Mathematical Physics</p>
-        <p class="specialism">Geometric Analysis and Spectral Geometry</p>
         <address>
           <p>Technical University of Berlin<br>
             Institute of Mathematics<br>
@@ -142,15 +129,29 @@
         alt="Portrait of Prof. Dr. Boris Vertman" width="800" height="534">
     </div>
 
+    <!-- Keep the linked PDFs and both JPG photos beside this HTML file.
+         No download attribute: open the files instead. -->
+    <nav class="documents" aria-label="PDF documents, open in a new tab">
+      <a href="Boris-Vertman-CV.pdf" target="_blank" rel="noopener noreferrer"
+        aria-label="Curriculum Vitae, opens in a new tab">Curriculum Vitae</a>
+      <a href="Boris-Vertman-Publications.pdf" target="_blank" rel="noopener noreferrer"
+        aria-label="Publications, opens in a new tab">Publications</a>
+      <a href="Boris-Vertman-teaching.pdf" target="_blank" rel="noopener noreferrer"
+        aria-label="Teaching, opens in a new tab">Teaching</a>
+      <!-- Add the funding PDF under this filename when available. -->
+      <a href="Boris-Vertman-Drittmittel.pdf" target="_blank" rel="noopener noreferrer"
+        aria-label="Third Party Funding, opens in a new tab">Third Party Funding</a>
+    </nav>
+
     <section aria-labelledby="research-interests">
       <h2 id="research-interests">Research Interests</h2>
       <!-- Sources: Research Interests in the CV, p. 5, and Research Statement, p. 19. -->
       <ul class="interests">
-        <li>Geometric analysis and nonlinear PDE on singular spaces</li>
-        <li>Spectral geometry, index theory and microlocal analysis</li>
-        <li>Geometric flows: Ricci flow, Yamabe flow and mean curvature flow</li>
-        <li>Mathematical physics, discrete geometry and spectral invariants</li>
-        <li>Numerical analysis on singular spaces and phase transitions</li>
+        <li>Geometric analysis and nonlinear PDE</li>
+        <li>Spectral geometry and index theory</li>
+        <li>Ricci, Yamabe and mean curvature flows</li>
+        <li>Mathematical physics and discrete geometry</li>
+        <li>Numerical analysis and phase transitions</li>
       </ul>
     </section>
 
@@ -163,46 +164,24 @@
            Formula for Determinants (2015). https://arxiv.org/abs/1403.6170
            Grieser / Held / Uecker / Vertman: Phase transitions and minimal interfaces
            on manifolds with conical singularities (2025). https://arxiv.org/abs/2403.07178 -->
-      <p>My research explores the interplay of geometry, analysis and mathematical
-        physics on spaces with singularities. It focuses on geometric flows and
-        the question of what geometric and topological information can be recovered
-        from the spectra of differential operators. To address these questions,
-        I develop analytical methods that remain applicable at conical tips,
-        edges and infinity.</p>
+      <p>My research asks how singularities affect geometric flows and what
+        geometric and topological information can be recovered from the spectra
+        of differential operators. I develop microlocal and analytical methods
+        to study these questions at conical tips, edges and infinity.</p>
       <p>A further focus connects continuous and discrete geometry: I study
         determinants and zeta functions of discrete Laplacians and their
         relationships with their continuous counterpart in the refinement limit.
         Here, rigorous analysis and numerical methods come together.</p>
     </section>
 
-    <section aria-labelledby="vision">
-      <h2 id="vision">Vision</h2>
+    <section aria-labelledby="research-vision">
+      <h2 id="research-vision">Research Vision</h2>
       <!-- Outlook based on the author's Research Plan, particularly pp. 22–27.
-           Graph clustering is presented there as a future project, without
-           claiming existing results of the author's own.
+           Unsupervised learning is presented as a future research direction.
            Further source: Meiners / Vertman, Spectral zeta function on discrete
            tori and Epstein-Riemann conjecture (2023). https://arxiv.org/abs/2202.02420 -->
-      <p>My vision is to strengthen the analytical connections between singular
-        spaces, discrete models and data-driven questions. How is geometric
-        information preserved under discretisation? How can curvature flows and
-        spectral methods help us understand the structure of complex spaces and
-        networks? Looking ahead, I aim to develop these approaches into
-        mathematically grounded methods for unsupervised learning.
-        The goal is to connect fundamental
-        geometric research with transparent mathematical methods for data analysis.</p>
+      <p>My vision is to strengthen the analytical connections between singular spaces, discrete models and data-driven questions. How is geometric information preserved under discretisation? How can curvature flows and spectral methods help us understand the structure of complex spaces and networks? Looking ahead, I aim to develop these approaches into mathematically grounded methods for unsupervised learning. The goal is to connect fundamental geometric research with transparent mathematical methods for data analysis.</p>
     </section>
-
-    <!-- Exactly three original PDFs. No download attribute: open the files instead.
-         Keep the three PDFs and both JPG photos beside this HTML file. -->
-    <nav class="documents" aria-label="PDF documents, open in a new tab">
-      <a href="Boris-Vertman-CV-2025.pdf" target="_blank" rel="noopener noreferrer"
-        aria-label="Curriculum Vitae, PDF, opens in a new tab">Curriculum Vitae <span class="pdf-label" aria-hidden="true">PDF</span></a>
-      <a href="Boris-Vertman-Publications-2025.pdf" target="_blank" rel="noopener noreferrer"
-        aria-label="Publications, PDF, opens in a new tab">Publications <span class="pdf-label" aria-hidden="true">PDF</span></a>
-      <a href="Boris-Vertman-teaching-2025.pdf" target="_blank" rel="noopener noreferrer"
-        aria-label="Lectures, PDF, opens in a new tab">Lectures <span class="pdf-label" aria-hidden="true">PDF</span></a>
-    </nav>
-    <p class="document-note">PDFs open in a new tab.</p>
 
     <section aria-labelledby="teaching">
       <h2 id="teaching">Teaching</h2>
@@ -214,8 +193,7 @@
       <figure>
         <img class="teaching-photo" src="teaching-picture.jpg"
           alt="Boris Vertman teaching mathematics at the blackboard in a lecture hall at the University of Oldenburg"
-          width="1280" height="720" loading="lazy">
-        <figcaption>Teaching at the Carl von Ossietzky University of Oldenburg.</figcaption>
+          width="500" height="281" style="width: 500px; max-width: 100%; height: auto;" loading="lazy">
       </figure>
     </section>
 
